@@ -99,11 +99,11 @@ class PDFController extends Controller
         $sufferer->sufferer_user_birte = $this->date_($sufferer->sufferer_user_birte);
         $sufferer->sufferer_start_date = $this->date_($sufferer->sufferer_start_date);
         $pdf = PDF::LoadView('/PDF/certificate', ['sufferer' => $sufferer, 'date'=>$date]);
-        return @$pdf->stream();
+        // return @$pdf->stream();
 
-        // $data['sufferer'] = $sufferer;
-        // $data['date'] = $date;
+        $data['sufferer'] = $sufferer;
+        $data['date'] = $date;
 
-        // return view('/PDF/certificate', $data);
+        return view('/PDF/certificate', $data);
     }
 }
