@@ -1,0 +1,12 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Certificate extends Model
+{
+    protected $table = 'guaranty_form'; // ใส่ชื่อตาราง
+    protected $primaryKey = 'guaranty_id'; // ใส่ Primary Key
+    public $timestamps = false;
+}
